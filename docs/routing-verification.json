@@ -1,0 +1,3118 @@
+{
+  "verified_at_utc": "2026-10-04T12:43:38.653030+00:00",
+  "kind": "live_routing_check",
+  "scope": "Same samples and recorded /chat context as jev-routing-calibration.json; Jev mode with live Jev, keyword mode offline. Thresholds were set on these samples, so this is a consistency check, not a held-out accuracy estimate.",
+  "requested_model": "jev-1.13.0",
+  "summary": {
+    "jev": {
+      "correct": 75,
+      "total": 78,
+      "escalation_recall": "14/14",
+      "false_escalation": 0,
+      "multi_turn_correct": "16/16",
+      "clarify": 4,
+      "degraded": 0
+    },
+    "keyword": {
+      "correct": 73,
+      "total": 78,
+      "escalation_recall": "14/14",
+      "false_escalation": 0,
+      "multi_turn_correct": "16/16",
+      "clarify": 9,
+      "degraded": null
+    },
+    "jev_latency_ms": {
+      "p50": 978.962,
+      "p95": 3237.87
+    }
+  },
+  "rows": [
+    {
+      "id": "A01",
+      "message": "退款一般多久能到账？",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.91,
+          "technical": 0.08,
+          "billing": 0.98,
+          "escalation": 0.04
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 2681.308
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "A02",
+      "message": "银卡会员和金卡会员有什么区别？怎么升级？",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.97,
+          "technical": 0.04,
+          "billing": 0.11,
+          "escalation": 0.03
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 3565.013
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "A03",
+      "message": "加急配送多少钱？几天能到？",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 0.99,
+        "relevance": {
+          "general": 0.97,
+          "technical": 0.04,
+          "billing": 0.84,
+          "escalation": 0.03
+        },
+        "urgent_probability": 0.28,
+        "latency_ms": 2621.238
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "A04",
+      "message": "开发票需要提供什么信息？多久能收到？",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.82,
+          "technical": 0.06,
+          "billing": 0.98,
+          "escalation": 0.03
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 3415.64
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "A05",
+      "message": "App 老是闪退怎么办？",
+      "accept": [
+        "technical"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "technical",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.09,
+          "technical": 0.97,
+          "billing": 0.02,
+          "escalation": 0.03
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 3089.116
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "B01",
+      "message": "帮我查一下订单 A1002 到哪了？",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.98,
+          "technical": 0.08,
+          "billing": 0.03,
+          "escalation": 0.02
+        },
+        "urgent_probability": 0.02,
+        "latency_ms": 813.812
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "B02",
+      "message": "订单 A1007 显示退款成功了，但我一直没收到钱",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.66,
+          "technical": 0.46,
+          "billing": 0.98,
+          "escalation": 0.36
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 1121.444
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "B03",
+      "message": "A1005 这个订单我怎么被扣了两次钱？",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.65,
+          "technical": 0.4,
+          "billing": 0.98,
+          "escalation": 0.55
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 1072.839
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "N01",
+      "message": "你们支持货到付款吗？",
+      "accept": [
+        "billing",
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 0.61,
+        "relevance": {
+          "general": 0.95,
+          "technical": 0.04,
+          "billing": 0.91,
+          "escalation": 0.03
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 1401.041
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "N02",
+      "message": "能开增值税专用发票吗？公司要抵扣",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.8,
+          "technical": 0.04,
+          "billing": 0.98,
+          "escalation": 0.04
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 876.198
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "N03",
+      "message": "我的积分能转给我妈用吗？",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.97,
+          "technical": 0.07,
+          "billing": 0.28,
+          "escalation": 0.03
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 879.305
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "C01",
+      "message": "订单 A1005 被扣了两次钱，而且我现在登录 App 一直报 401",
+      "accept": [
+        "billing",
+        "technical"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [
+          "technical"
+        ],
+        "reason": "compound_domains",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 0.87,
+        "relevance": {
+          "general": 0.75,
+          "technical": 0.97,
+          "billing": 0.97,
+          "escalation": 0.74
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 557.378
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [
+          "billing"
+        ],
+        "reason": "compound_domains",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "C02",
+      "message": "我想退掉 A1001，另外退了以后我的积分会被扣回去吗？",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": false,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [
+          "billing"
+        ],
+        "reason": "compound_domains",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 0.7,
+        "relevance": {
+          "general": 0.97,
+          "technical": 0.05,
+          "billing": 0.87,
+          "escalation": 0.03
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 1715.715
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "C03",
+      "message": "A1004 物流一直不更新，我想直接退款，退款能退到我另一张卡上吗？",
+      "accept": [
+        "billing",
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 0.97,
+        "relevance": {
+          "general": 0.96,
+          "technical": 0.21,
+          "billing": 0.98,
+          "escalation": 0.06
+        },
+        "urgent_probability": 0.04,
+        "latency_ms": 542.686
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "C04",
+      "message": "A1012 想退货，原价 200 用了一张 20 块的券，能退多少？券会退回来吗？",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 0.99,
+        "relevance": {
+          "general": 0.93,
+          "technical": 0.03,
+          "billing": 0.98,
+          "escalation": 0.04
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 2179.46
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "D01",
+      "message": "我要投诉！你们客服根本解决不了问题，马上给我转人工！",
+      "accept": [
+        "escalation",
+        "general"
+      ],
+      "expect_escalation": true,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "jev_escalation",
+        "source": "jev",
+        "degraded": "",
+        "urgent": false,
+        "choice": "escalation",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.48,
+          "technical": 0.19,
+          "billing": 0.09,
+          "escalation": 0.97
+        },
+        "urgent_probability": 0.2,
+        "latency_ms": 3429.582
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "explicit_human_request",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "D02",
+      "message": "我的账号被盗了！有人用我的账号下了好几单，还扣了钱！",
+      "accept": [
+        "escalation"
+      ],
+      "expect_escalation": true,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "jev_escalation",
+        "source": "jev",
+        "degraded": "",
+        "urgent": false,
+        "choice": "escalation",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.72,
+          "technical": 0.8,
+          "billing": 0.95,
+          "escalation": 0.98
+        },
+        "urgent_probability": 0.14,
+        "latency_ms": 1829.118
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "security_risk",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "D03",
+      "message": "收到的充电宝冒烟了，差点着火！",
+      "accept": [
+        "billing",
+        "escalation",
+        "general"
+      ],
+      "expect_escalation": true,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "jev_escalation",
+        "source": "jev",
+        "degraded": "",
+        "urgent": false,
+        "choice": "escalation",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.3,
+          "technical": 0.88,
+          "billing": 0.04,
+          "escalation": 0.98
+        },
+        "urgent_probability": 0.23,
+        "latency_ms": 2896.117
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "product_safety",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "D04",
+      "message": "有人冒充你们客服让我转账，我已经转了 2000 块！",
+      "accept": [
+        "billing",
+        "escalation",
+        "general"
+      ],
+      "expect_escalation": true,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "jev_escalation",
+        "source": "jev",
+        "degraded": "",
+        "urgent": false,
+        "choice": "escalation",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.11,
+          "technical": 0.05,
+          "billing": 0.95,
+          "escalation": 0.98
+        },
+        "urgent_probability": 0.09,
+        "latency_ms": 866.252
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "fraud",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "D05",
+      "message": "快递怎么这么慢！订单 A1002 都发货两天了还没到",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 0.99,
+        "relevance": {
+          "general": 0.97,
+          "technical": 0.08,
+          "billing": 0.03,
+          "escalation": 0.08
+        },
+        "urgent_probability": 0.05,
+        "latency_ms": 1348.977
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "E01",
+      "message": "我把密码告诉你，你帮我登录看看哪里有问题",
+      "accept": [
+        "escalation",
+        "technical"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "technical",
+        "choice_probability": 0.77,
+        "relevance": {
+          "general": 0.59,
+          "technical": 0.94,
+          "billing": 0.03,
+          "escalation": 0.58
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 568.018
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "E02",
+      "message": "你就直接告诉我，我这个退款肯定能成功吧？",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.84,
+          "technical": 0.07,
+          "billing": 0.98,
+          "escalation": 0.07
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 566.583
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "E03",
+      "message": "取消自动续费之后，这个月扣的钱会退给我吗？",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.89,
+          "technical": 0.11,
+          "billing": 0.98,
+          "escalation": 0.25
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 1474.856
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "E04",
+      "message": "帮我查一下我老婆的订单吧，她手机号是 138 1234 5678",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 0.99,
+        "relevance": {
+          "general": 0.95,
+          "technical": 0.07,
+          "billing": 0.23,
+          "escalation": 0.08
+        },
+        "urgent_probability": 0.02,
+        "latency_ms": 864.203
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "F01",
+      "message": "标准配送的话大概几天能到？",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "live_chat",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.97,
+          "technical": 0.04,
+          "billing": 0.03,
+          "escalation": 0.03
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 562.536
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "F02",
+      "message": "那多出来的那笔什么时候能退给我？",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "live_chat",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.82,
+          "technical": 0.13,
+          "billing": 0.98,
+          "escalation": 0.26
+        },
+        "urgent_probability": 0.05,
+        "latency_ms": 2156.406
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "F03",
+      "message": "我已经重置过密码了，还是不行",
+      "accept": [
+        "technical"
+      ],
+      "expect_escalation": false,
+      "context_source": "live_chat",
+      "jev": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "technical",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.49,
+          "technical": 0.97,
+          "billing": 0.02,
+          "escalation": 0.09
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 570.482
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "F04",
+      "message": "买个 100 块的东西最多能抵多少？",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "live_chat",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 0.98,
+        "relevance": {
+          "general": 0.93,
+          "technical": 0.05,
+          "billing": 0.73,
+          "escalation": 0.02
+        },
+        "urgent_probability": 0.02,
+        "latency_ms": 619.032
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "F05",
+      "message": "新地址是北京市朝阳区建国路 88 号",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "live_chat",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 0.98,
+        "relevance": {
+          "general": 0.91,
+          "technical": 0.09,
+          "billing": 0.03,
+          "escalation": 0.06
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 980.805
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "F06",
+      "message": "能退多少钱？",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "live_chat",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.86,
+          "technical": 0.05,
+          "billing": 0.98,
+          "escalation": 0.05
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 1557.533
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X01",
+      "message": "我要投诉，你们服务太差了",
+      "accept": [
+        "escalation"
+      ],
+      "expect_escalation": true,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "jev_escalation",
+        "source": "jev",
+        "degraded": "",
+        "urgent": false,
+        "choice": "escalation",
+        "choice_probability": 0.95,
+        "relevance": {
+          "general": 0.37,
+          "technical": 0.12,
+          "billing": 0.06,
+          "escalation": 0.81
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 1414.94
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "complaint",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X02",
+      "message": "找你们经理",
+      "accept": [
+        "escalation"
+      ],
+      "expect_escalation": true,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "jev_escalation",
+        "source": "jev",
+        "degraded": "",
+        "urgent": false,
+        "choice": "escalation",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.19,
+          "technical": 0.07,
+          "billing": 0.05,
+          "escalation": 0.96
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 820.591
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "complaint",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X03",
+      "message": "能不能帮我转人工",
+      "accept": [
+        "escalation"
+      ],
+      "expect_escalation": true,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "jev_escalation",
+        "source": "jev",
+        "degraded": "",
+        "urgent": false,
+        "choice": "escalation",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.17,
+          "technical": 0.1,
+          "billing": 0.04,
+          "escalation": 0.94
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 818.361
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "explicit_human_request",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X04",
+      "message": "紧急！支付失败了",
+      "accept": [
+        "escalation"
+      ],
+      "expect_escalation": true,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "jev_urgent",
+        "source": "jev",
+        "degraded": "",
+        "urgent": true,
+        "choice": "billing",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.33,
+          "technical": 0.94,
+          "billing": 0.98,
+          "escalation": 0.29
+        },
+        "urgent_probability": 0.98,
+        "latency_ms": 825.011
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "urgent",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": true
+      }
+    },
+    {
+      "id": "X05",
+      "message": "我的账号被盗了",
+      "accept": [
+        "escalation"
+      ],
+      "expect_escalation": true,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "jev_escalation",
+        "source": "jev",
+        "degraded": "",
+        "urgent": false,
+        "choice": "escalation",
+        "choice_probability": 0.99,
+        "relevance": {
+          "general": 0.74,
+          "technical": 0.91,
+          "billing": 0.06,
+          "escalation": 0.96
+        },
+        "urgent_probability": 0.06,
+        "latency_ms": 1612.786
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "security_risk",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X06",
+      "message": "怎么投诉商家？",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 0.62,
+        "relevance": {
+          "general": 0.76,
+          "technical": 0.06,
+          "billing": 0.18,
+          "escalation": 0.07
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 603.056
+      },
+      "keyword": {
+        "ok": false,
+        "outcome": "clarify",
+        "primary": "general",
+        "supporting": [],
+        "reason": "insufficient_or_ambiguous_evidence",
+        "source": "clarify",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X07",
+      "message": "我不是要投诉，只想问发票",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.58,
+          "technical": 0.07,
+          "billing": 0.96,
+          "escalation": 0.04
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 1410.185
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X08",
+      "message": "不用转人工，帮我查退款",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.72,
+          "technical": 0.08,
+          "billing": 0.93,
+          "escalation": 0.04
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 2986.957
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X09",
+      "message": "页面显示“联系人工客服”，但我的问题是退款",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 0.9,
+        "relevance": {
+          "general": 0.74,
+          "technical": 0.37,
+          "billing": 0.97,
+          "escalation": 0.39
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 856.553
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X10",
+      "message": "怎么防止充电宝起火",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": false,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_relevance",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 0.37,
+        "relevance": {
+          "general": 0.39,
+          "technical": 0.55,
+          "billing": 0.02,
+          "escalation": 0.06
+        },
+        "urgent_probability": 0.04,
+        "latency_ms": 559.539
+      },
+      "keyword": {
+        "ok": false,
+        "outcome": "clarify",
+        "primary": "general",
+        "supporting": [],
+        "reason": "insufficient_or_ambiguous_evidence",
+        "source": "clarify",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X11",
+      "message": "如何防止账号被盗",
+      "accept": [
+        "general",
+        "technical"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 0.8,
+        "relevance": {
+          "general": 0.74,
+          "technical": 0.73,
+          "billing": 0.03,
+          "escalation": 0.05
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 1375.587
+      },
+      "keyword": {
+        "ok": false,
+        "outcome": "clarify",
+        "primary": "general",
+        "supporting": [],
+        "reason": "insufficient_or_ambiguous_evidence",
+        "source": "clarify",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X12",
+      "message": "不紧急，退款慢慢处理就好",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.48,
+          "technical": 0.05,
+          "billing": 0.74,
+          "escalation": 0.03
+        },
+        "urgent_probability": 0.02,
+        "latency_ms": 2315.067
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X13",
+      "message": "能立刻发货吗",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.97,
+          "technical": 0.05,
+          "billing": 0.04,
+          "escalation": 0.03
+        },
+        "urgent_probability": 0.07,
+        "latency_ms": 561.975
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X14",
+      "message": "我想立刻取消订单",
+      "accept": [
+        "billing",
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 0.93,
+        "relevance": {
+          "general": 0.87,
+          "technical": 0.05,
+          "billing": 0.59,
+          "escalation": 0.05
+        },
+        "urgent_probability": 0.13,
+        "latency_ms": 1639.132
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X15",
+      "message": "你好",
+      "accept": [
+        "clarify",
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "clarify",
+        "primary": "general",
+        "supporting": [],
+        "reason": "insufficient_or_ambiguous_evidence",
+        "source": "clarify",
+        "degraded": "",
+        "urgent": false,
+        "choice": "unknown",
+        "choice_probability": 0.94,
+        "relevance": {
+          "general": 0.07,
+          "technical": 0.04,
+          "billing": 0.03,
+          "escalation": 0.02
+        },
+        "urgent_probability": 0.02,
+        "latency_ms": 865.756
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "clarify",
+        "primary": "general",
+        "supporting": [],
+        "reason": "insufficient_or_ambiguous_evidence",
+        "source": "clarify",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X16",
+      "message": "你好，我想退款",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.81,
+          "technical": 0.05,
+          "billing": 0.98,
+          "escalation": 0.06
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 1405.89
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X17",
+      "message": "你好，App 登录报错了",
+      "accept": [
+        "technical"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "technical",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.5,
+          "technical": 0.98,
+          "billing": 0.03,
+          "escalation": 0.04
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 892.815
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X18",
+      "message": "退换货政策里退款多久到账",
+      "accept": [
+        "billing",
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 0.9,
+        "relevance": {
+          "general": 0.97,
+          "technical": 0.06,
+          "billing": 0.97,
+          "escalation": 0.03
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 978.962
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X19",
+      "message": "会员积分怎么用",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.97,
+          "technical": 0.07,
+          "billing": 0.23,
+          "escalation": 0.02
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 1937.396
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X20",
+      "message": "怎么换绑手机号",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.97,
+          "technical": 0.78,
+          "billing": 0.03,
+          "escalation": 0.04
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 851.555
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X21",
+      "message": "我想注销账户",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.96,
+          "technical": 0.18,
+          "billing": 0.09,
+          "escalation": 0.05
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 572.22
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X22",
+      "message": "登录后怎么查积分",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.96,
+          "technical": 0.4,
+          "billing": 0.09,
+          "escalation": 0.02
+        },
+        "urgent_probability": 0.02,
+        "latency_ms": 963.53
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X23",
+      "message": "我这边页面一直不对劲",
+      "accept": [
+        "clarify",
+        "technical"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "technical",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.4,
+          "technical": 0.93,
+          "billing": 0.07,
+          "escalation": 0.05
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 836.211
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "clarify",
+        "primary": "general",
+        "supporting": [],
+        "reason": "insufficient_or_ambiguous_evidence",
+        "source": "clarify",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X24",
+      "message": "页面一直转圈打不开",
+      "accept": [
+        "technical"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "technical",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.18,
+          "technical": 0.97,
+          "billing": 0.03,
+          "escalation": 0.04
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 599.302
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X25",
+      "message": "App 支付页面报错",
+      "accept": [
+        "billing",
+        "technical"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [
+          "billing"
+        ],
+        "reason": "compound_domains",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "technical",
+        "choice_probability": 0.59,
+        "relevance": {
+          "general": 0.21,
+          "technical": 0.97,
+          "billing": 0.97,
+          "escalation": 0.08
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 614.029
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [
+          "billing"
+        ],
+        "reason": "compound_domains",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X26",
+      "message": "登录报错401，而且被重复扣款了",
+      "accept": [
+        "billing",
+        "technical"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [
+          "billing"
+        ],
+        "reason": "compound_domains",
+        "source": "jev_relevance",
+        "degraded": "",
+        "urgent": false,
+        "choice": "escalation",
+        "choice_probability": 0.35,
+        "relevance": {
+          "general": 0.59,
+          "technical": 0.98,
+          "billing": 0.97,
+          "escalation": 0.85
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 1377.532
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [
+          "billing"
+        ],
+        "reason": "compound_domains",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X27",
+      "message": "App 登录失败，顺便问下订阅怎么取消",
+      "accept": [
+        "billing",
+        "technical"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [
+          "billing"
+        ],
+        "reason": "compound_domains",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "technical",
+        "choice_probability": 0.98,
+        "relevance": {
+          "general": 0.87,
+          "technical": 0.95,
+          "billing": 0.86,
+          "escalation": 0.05
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 846.084
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [
+          "billing"
+        ],
+        "reason": "compound_domains",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X28",
+      "message": "订单物流不更新，退款还没到账",
+      "accept": [
+        "billing",
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 0.62,
+        "relevance": {
+          "general": 0.97,
+          "technical": 0.58,
+          "billing": 0.97,
+          "escalation": 0.31
+        },
+        "urgent_probability": 0.04,
+        "latency_ms": 807.656
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X29",
+      "message": "我买的衣服尺码不对怎么办",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "live_chat",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.9,
+          "technical": 0.09,
+          "billing": 0.25,
+          "escalation": 0.04
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 834.67
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X30",
+      "message": "还是不行",
+      "accept": [
+        "technical"
+      ],
+      "expect_escalation": false,
+      "context_source": "live_chat",
+      "jev": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "technical",
+        "choice_probability": 0.92,
+        "relevance": {
+          "general": 0.48,
+          "technical": 0.96,
+          "billing": 0.02,
+          "escalation": 0.08
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 1175.731
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X31",
+      "message": "帮我看看",
+      "accept": [
+        "clarify"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "clarify",
+        "primary": "general",
+        "supporting": [],
+        "reason": "insufficient_or_ambiguous_evidence",
+        "source": "clarify",
+        "degraded": "",
+        "urgent": false,
+        "choice": "unknown",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.36,
+          "technical": 0.35,
+          "billing": 0.08,
+          "escalation": 0.04
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 1600.452
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "clarify",
+        "primary": "general",
+        "supporting": [],
+        "reason": "insufficient_or_ambiguous_evidence",
+        "source": "clarify",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X32",
+      "message": "那个东西有点奇怪",
+      "accept": [
+        "clarify"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "clarify",
+        "primary": "general",
+        "supporting": [],
+        "reason": "insufficient_or_ambiguous_evidence",
+        "source": "clarify",
+        "degraded": "",
+        "urgent": false,
+        "choice": "unknown",
+        "choice_probability": 0.98,
+        "relevance": {
+          "general": 0.32,
+          "technical": 0.37,
+          "billing": 0.08,
+          "escalation": 0.05
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 545.594
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "clarify",
+        "primary": "general",
+        "supporting": [],
+        "reason": "insufficient_or_ambiguous_evidence",
+        "source": "clarify",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X33",
+      "message": "订单 A10050 重复扣款 500 元，而且 App 登录报 401",
+      "accept": [
+        "billing",
+        "technical"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [
+          "technical"
+        ],
+        "reason": "compound_domains",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 0.94,
+        "relevance": {
+          "general": 0.64,
+          "technical": 0.97,
+          "billing": 0.98,
+          "escalation": 0.77
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 575.476
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "technical",
+        "primary": "technical",
+        "supporting": [
+          "billing"
+        ],
+        "reason": "compound_domains",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X34",
+      "message": "有人用我的银行卡在你们平台盗刷了 3000 块",
+      "accept": [
+        "escalation"
+      ],
+      "expect_escalation": true,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "jev_escalation",
+        "source": "jev",
+        "degraded": "",
+        "urgent": false,
+        "choice": "escalation",
+        "choice_probability": 0.99,
+        "relevance": {
+          "general": 0.19,
+          "technical": 0.12,
+          "billing": 0.98,
+          "escalation": 0.98
+        },
+        "urgent_probability": 0.05,
+        "latency_ms": 538.681
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "security_risk",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X35",
+      "message": "我只是问问，你们的人工客服几点上班？",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 0.68,
+        "relevance": {
+          "general": 0.36,
+          "technical": 0.04,
+          "billing": 0.03,
+          "escalation": 0.04
+        },
+        "urgent_probability": 0.02,
+        "latency_ms": 545.148
+      },
+      "keyword": {
+        "ok": false,
+        "outcome": "clarify",
+        "primary": "general",
+        "supporting": [],
+        "reason": "insufficient_or_ambiguous_evidence",
+        "source": "clarify",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X36",
+      "message": "紧急！订单 A10050 还没发货",
+      "accept": [
+        "escalation"
+      ],
+      "expect_escalation": true,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "jev_urgent",
+        "source": "jev",
+        "degraded": "",
+        "urgent": true,
+        "choice": "general",
+        "choice_probability": 0.99,
+        "relevance": {
+          "general": 0.97,
+          "technical": 0.14,
+          "billing": 0.04,
+          "escalation": 0.06
+        },
+        "urgent_probability": 0.98,
+        "latency_ms": 2225.074
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "urgent",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": true
+      }
+    },
+    {
+      "id": "X37",
+      "message": "不急，物流慢点也没关系，就想问下大概几天到",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.96,
+          "technical": 0.04,
+          "billing": 0.02,
+          "escalation": 0.02
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 1372.163
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X38",
+      "message": "Urgent: my payment failed twice",
+      "accept": [
+        "escalation"
+      ],
+      "expect_escalation": true,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "jev_urgent",
+        "source": "jev",
+        "degraded": "",
+        "urgent": true,
+        "choice": "billing",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.37,
+          "technical": 0.92,
+          "billing": 0.98,
+          "escalation": 0.23
+        },
+        "urgent_probability": 0.99,
+        "latency_ms": 1022.785
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "urgent",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": true
+      }
+    },
+    {
+      "id": "X39",
+      "message": "怎么防止被骗",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": false,
+        "outcome": "clarify",
+        "primary": "general",
+        "supporting": [],
+        "reason": "insufficient_or_ambiguous_evidence",
+        "source": "clarify",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 0.47,
+        "relevance": {
+          "general": 0.14,
+          "technical": 0.04,
+          "billing": 0.19,
+          "escalation": 0.06
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 1342.553
+      },
+      "keyword": {
+        "ok": false,
+        "outcome": "clarify",
+        "primary": "general",
+        "supporting": [],
+        "reason": "insufficient_or_ambiguous_evidence",
+        "source": "clarify",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "X40",
+      "message": "我要找律师起诉你们",
+      "accept": [
+        "escalation"
+      ],
+      "expect_escalation": true,
+      "context_source": "first_turn",
+      "jev": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "jev_escalation",
+        "source": "jev",
+        "degraded": "",
+        "urgent": false,
+        "choice": "escalation",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.14,
+          "technical": 0.03,
+          "billing": 0.09,
+          "escalation": 0.96
+        },
+        "urgent_probability": 0.04,
+        "latency_ms": 2078.566
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "complaint",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "M01",
+      "message": "那大概几天能退回来？",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "live_chat",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.78,
+          "technical": 0.14,
+          "billing": 0.97,
+          "escalation": 0.34
+        },
+        "urgent_probability": 0.04,
+        "latency_ms": 696.335
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "M02",
+      "message": "算了不用人工了，我自己查下退款进度就行",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "live_chat",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 0.91,
+        "relevance": {
+          "general": 0.45,
+          "technical": 0.08,
+          "billing": 0.7,
+          "escalation": 0.06
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 572.223
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "M03",
+      "message": "还是不行，给我转人工",
+      "accept": [
+        "escalation"
+      ],
+      "expect_escalation": true,
+      "context_source": "live_chat",
+      "jev": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "jev_escalation",
+        "source": "jev",
+        "degraded": "",
+        "urgent": false,
+        "choice": "escalation",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.42,
+          "technical": 0.88,
+          "billing": 0.02,
+          "escalation": 0.94
+        },
+        "urgent_probability": 0.04,
+        "latency_ms": 3237.87
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "explicit_human_request",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "M04",
+      "message": "密码已经改好了，现在想问被盗刷的钱怎么退",
+      "accept": [
+        "billing",
+        "escalation"
+      ],
+      "expect_escalation": null,
+      "context_source": "live_chat",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 0.54,
+        "relevance": {
+          "general": 0.65,
+          "technical": 0.24,
+          "billing": 0.98,
+          "escalation": 0.95
+        },
+        "urgent_probability": 0.04,
+        "latency_ms": 1886.982
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "escalation",
+        "primary": "escalation",
+        "supporting": [],
+        "reason": "security_risk",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "M05",
+      "message": "现在支付成功了，发票怎么开",
+      "accept": [
+        "billing"
+      ],
+      "expect_escalation": false,
+      "context_source": "live_chat",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.73,
+          "technical": 0.21,
+          "billing": 0.97,
+          "escalation": 0.07
+        },
+        "urgent_probability": 0.07,
+        "latency_ms": 559.36
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "M06",
+      "message": "退回来的运费谁出？",
+      "accept": [
+        "billing",
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "live_chat",
+      "jev": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "billing",
+        "choice_probability": 0.62,
+        "relevance": {
+          "general": 0.93,
+          "technical": 0.05,
+          "billing": 0.88,
+          "escalation": 0.04
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 548.693
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "billing",
+        "primary": "billing",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "M07",
+      "message": "已经解决了。另外想问下会员积分怎么用",
+      "accept": [
+        "general"
+      ],
+      "expect_escalation": false,
+      "context_source": "live_chat",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.95,
+          "technical": 0.09,
+          "billing": 0.16,
+          "escalation": 0.03
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 560.555
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    },
+    {
+      "id": "M08",
+      "message": "订单号是 A1002，什么时候能到？",
+      "accept": [
+        "escalation",
+        "general"
+      ],
+      "expect_escalation": null,
+      "context_source": "live_chat",
+      "jev": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "jev",
+        "source": "jev_choice",
+        "degraded": "",
+        "urgent": false,
+        "choice": "general",
+        "choice_probability": 1.0,
+        "relevance": {
+          "general": 0.97,
+          "technical": 0.06,
+          "billing": 0.03,
+          "escalation": 0.09
+        },
+        "urgent_probability": 0.03,
+        "latency_ms": 1431.76
+      },
+      "keyword": {
+        "ok": true,
+        "outcome": "general",
+        "primary": "general",
+        "supporting": [],
+        "reason": "keyword_fallback",
+        "source": "keyword",
+        "degraded": "jev_api_key_missing",
+        "urgent": false
+      }
+    }
+  ]
+}

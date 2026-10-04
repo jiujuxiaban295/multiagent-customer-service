@@ -1,0 +1,8 @@
+.venv
+.git
+.idea
+.env
+__pycache__
+data/chroma
+data/*.sqlite3*
+data/eval

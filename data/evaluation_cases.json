@@ -1,0 +1,7 @@
+[
+  {"id": "tech", "messages": ["App 登录报401，请调用错误码工具查询"], "must_include": ["401"]},
+  {"id": "compound", "messages": ["订单 A10050 重复扣款500元，而且App登录报401"], "must_include": ["401"]},
+  {"id": "memory", "messages": ["我在Android App登录报401", "我已经重新登录过了，还是不行"], "must_include": []},
+  {"id": "clarify", "messages": ["帮我看看"], "must_include": []},
+  {"id": "negated_human", "messages": ["不用转人工，我只想知道退款一般多久到账"], "must_include": []}
+]

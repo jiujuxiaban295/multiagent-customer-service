@@ -1,0 +1,78 @@
+{
+  "timestamp_utc": "2026-10-04T10:24:48.173160+00:00",
+  "verification_scope": "real local bge-m3 semantic recall only",
+  "embedding_model": "text-embedding-bge-m3",
+  "knowledge_collection": "knowledge_base__text_embedding_bge_m3",
+  "credentials_saved": false,
+  "external_rewrite_rerank": {
+    "status": "blocked_by_automatic_approval_review",
+    "reason": "Specific authorization for exporting retrieved project knowledge to the external generation provider was not established."
+  },
+  "queries": [
+    {
+      "query": "退款审核通过后，微信和银行卡各需要多久到账？",
+      "success": true,
+      "error": "",
+      "results": [
+        {
+          "title": "退款到账说明",
+          "id": "50e7685921a28f863984aac16af41827",
+          "score": 0.7895
+        },
+        {
+          "title": "退款政策",
+          "id": "6204c8f7f550a6879038f3ddef19606c",
+          "score": 0.7056
+        },
+        {
+          "title": "支付异常处理",
+          "id": "a0fbf8ea566e41360ceb1423fcc59394",
+          "score": 0.6994
+        },
+        {
+          "title": "积分抵扣与退款",
+          "id": "f5c372346ae0daa124e3a45358f8e9c6",
+          "score": 0.6567
+        },
+        {
+          "title": "人工客服与投诉",
+          "id": "e11509986626d53bb9122121b062989e",
+          "score": 0.6452
+        }
+      ]
+    },
+    {
+      "query": "订单原价200元，使用20元优惠券，退货后可以退多少钱？",
+      "success": true,
+      "error": "",
+      "results": [
+        {
+          "title": "优惠券使用规则",
+          "id": "1d10fe6fc0404d56632dbc639dc88a99",
+          "score": 0.6996
+        },
+        {
+          "title": "退款到账说明",
+          "id": "50e7685921a28f863984aac16af41827",
+          "score": 0.6706
+        },
+        {
+          "title": "积分抵扣与退款",
+          "id": "f5c372346ae0daa124e3a45358f8e9c6",
+          "score": 0.6538
+        },
+        {
+          "title": "退款政策",
+          "id": "6204c8f7f550a6879038f3ddef19606c",
+          "score": 0.6358
+        },
+        {
+          "title": "售后申请与退货流程",
+          "id": "cdf08c00cdc1674871bac0654cc3193e",
+          "score": 0.6044
+        }
+      ]
+    }
+  ],
+  "chunks": 26
+}

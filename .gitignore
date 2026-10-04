@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.idea/
+*.ses
+data/chroma/
+data/*.sqlite3*
+data/eval/
+.DS_Store

@@ -1,0 +1,164 @@
+{
+  "data_kind": "synthetic_fixture",
+  "model": "deepseek-v4-flash",
+  "verified_at": "2026-10-04T11:20:31.232667+00:00",
+  "samples": [
+    {
+      "primary_agent": "technical",
+      "supporting_agents": [],
+      "agent_types": [
+        "technical"
+      ],
+      "tools_used": [
+        "lookup_error_code",
+        "build_diagnostic_plan"
+      ],
+      "llm_calls": 2,
+      "input_tokens": 5481,
+      "output_tokens": 437,
+      "response": "**现象复述**：App 登录返回 401，属于认证失败（非授权/权限问题，那是 403）。我这边没有服务端日志权限，以下为低风险排查方向。\n\n**可能原因**\n- 登录态 Token 过期、被撤销，或客户端未带上\n- 请求时间戳/签名不匹配（时钟偏差、签名算法或密钥版本不一致）\n- 账号状态异常（被锁定、需重新授权）\n- 客户端版本过旧，认证接口已变更\n\n**排查步骤**\n1. 记录完整错误信息：发生时间、是否每次必现、App 版本、系统与网络环境。\n2. 检查网络链路：DNS、代理、证书是否被拦截（企业网络/抓包代理常见）。\n3. 确认登录态：退出后重新登录，观察是否仍 401；不要提供密码或验证码给我。\n4. 核对签名与时间：确认设备时间准确、签名用的密钥版本与当前环境一致（密钥只展示前后几位即可）。\n5. 用最小请求复现：记录接口路径、请求时间、request_id、响应体摘要，便于定位。\n\n**验证方式**：重新登录后若返回 200 且能正常进入，说明是登录态问题；若仍 401，请把第 5 步的 request_id 和时间点提供给人工核验。\n\n**需要补充的信息**：App 版本、是否必现、网络环境、request_id 与响应体摘要。\n\n**升级条件**：若多名用户同时无法登录，或涉及账号权限异常、疑似密钥泄露，建议转人工/二线技术处理。",
+      "escalated": false,
+      "sample": "technical",
+      "jev_request_count": 1,
+      "session_message_records": 2,
+      "handoff_summaries": [],
+      "role_results": [
+        {
+          "role": "technical",
+          "success": true,
+          "response": "**现象复述**：App 登录返回 401，属于认证失败（非授权/权限问题，那是 403）。我这边没有服务端日志权限，以下为低风险排查方向。\n\n**可能原因**\n- 登录态 Token 过期、被撤销，或客户端未带上\n- 请求时间戳/签名不匹配（时钟偏差、签名算法或密钥版本不一致）\n- 账号状态异常（被锁定、需重新授权）\n- 客户端版本过旧，认证接口已变更\n\n**排查步骤**\n1. 记录完整错误信息：发生时间、是否每次必现、App 版本、系统与网络环境。\n2. 检查网络链路：DNS、代理、证书是否被拦截（企业网络/抓包代理常见）。\n3. 确认登录态：退出后重新登录，观察是否仍 401；不要提供密码或验证码给我。\n4. 核对签名与时间：确认设备时间准确、签名用的密钥版本与当前环境一致（密钥只展示前后几位即可）。\n5. 用最小请求复现：记录接口路径、请求时间、request_id、响应体摘要，便于定位。\n\n**验证方式**：重新登录后若返回 200 且能正常进入，说明是登录态问题；若仍 401，请把第 5 步的 request_id 和时间点提供给人工核验。\n\n**需要补充的信息**：App 版本、是否必现、网络环境、request_id 与响应体摘要。\n\n**升级条件**：若多名用户同时无法登录，或涉及账号权限异常、疑似密钥泄露，建议转人工/二线技术处理。",
+          "requested_role": "technical"
+        }
+      ]
+    },
+    {
+      "primary_agent": "technical",
+      "supporting_agents": [
+        "billing"
+      ],
+      "agent_types": [
+        "technical",
+        "billing"
+      ],
+      "tools_used": [
+        "lookup_error_code",
+        "compare_amounts"
+      ],
+      "llm_calls": 5,
+      "input_tokens": 12196,
+      "output_tokens": 823,
+      "response": "**关于 App 登录报 401**\n\n401 属于认证失败，常见原因是登录态失效、Token 过期或签名/时间戳不匹配。可先按以下方向排查：\n\n1. 重新登录后是否恢复正常。\n2. 请求是否携带了正确且未过期的 Token。\n3. 若为接口调用，核对签名与时间戳是否在有效窗口内。\n4. 记录失败时间点和 request_id，便于后续核验。\n\n如需进一步定位，请补充：发生时间、是否稳定复现、App 版本与网络环境、错误提示原文。\n\n说明：我无法读取服务端日志，也无法核验你账号的实际登录状态；如需确认，请通过 App 内帮助入口或官方客服渠道转技术侧核实。\n\n**关于金额比对（仅算术）**\n\n- 20 元 − 10 元 = 10 元，差值为 10 元。\n- 这仅是数值差值，不能据此判断是否重复扣款或是否应退款。\n\n如需确认这两笔金额对应的实际账单状态，请查看官方订单页面或联系人工核验。若涉及扣款争议，需要提供订单号或交易号、两笔支付时间、支付渠道、各自金额与币种，由人工或财务进一步核实。",
+      "escalated": false,
+      "sample": "compound",
+      "jev_request_count": 1,
+      "session_message_records": 2,
+      "handoff_summaries": [],
+      "role_results": [
+        {
+          "role": "technical",
+          "success": true,
+          "response": "I'll look up the 401 error code and run the amount arithmetic.\n\n**401 认证失败**（未读取服务端日志，以下为通用排查方向）\n\n可能原因：Token/API Key 过期、签名或时间戳不匹配、登录态失效。\n\n排查步骤：\n1. 确认 App 内登录态是否仍有效（重新登录后是否恢复）。\n2. 确认请求是否携带了正确的 Token，且未使用过期凭证。\n3. 若为接口调用，核对签名与时间戳是否在有效窗口内。\n4. 记录失败时间点与 request_id，便于后续核验。\n\n需要补充：发生时间、是否稳定复现、App 版本与网络环境、错误提示原文。\n\n**金额比对（纯算术）**：20 元 − 10 元 = 10 元；20 元 > 10 元，差额 10 元。\n\n说明：我没有订单、支付或物流数据访问权限，无法核验这两笔金额对应的实际账单状态；如需确认，请查看官方订单页面或联系人工核验。另外，`compare_amounts` 不在我当前可用的工具范围内，因此这里只做了算术比对。",
+          "requested_role": "technical"
+        },
+        {
+          "role": "billing",
+          "success": true,
+          "response": "我先说明两点：401 属于技术侧问题，我这边是账单角色，无法调用技术工具；金额比对我可以做，但只做算术，不代表任何扣款结论。\n\n**金额比对（仅算术）**\n- 20 元 − 10 元 = 10 元，差值为 10 元。\n- 这只是一个差值，不能据此判断是否重复扣款、是否应退款。\n\n**关于 401**\n- 这是登录鉴权类技术问题，不在账单角色处理范围内，我无法调用技术侧工具或给出错误码结论。建议通过 App 内帮助入口或官方客服渠道转技术侧核实。\n\n**如果这两笔金额涉及实际扣款争议**\n需要核验：订单号或交易号、两笔支付时间、支付渠道、各自金额与币种。目前缺少订单号，无法进一步判断。涉及重复扣款需人工或财务核验，我不会在此承诺退款或到账结果。\n\n需要我按重复扣款方向生成一份人工交接摘要吗？",
+          "requested_role": "billing"
+        }
+      ]
+    },
+    {
+      "primary_agent": "escalation",
+      "supporting_agents": [],
+      "agent_types": [
+        "escalation"
+      ],
+      "tools_used": [],
+      "llm_calls": 0,
+      "input_tokens": 0,
+      "output_tokens": 0,
+      "response": "这个问题需要人工客服继续核验，已整理以下交接信息。\n\n升级原因：explicit_human_request\n问题类型：escalation，优先标记：UNKNOWN\n已记录信息：{\"order_ids\": [\"FIXTURE-1001\"], \"amounts\": [], \"dates\": [], \"error_codes\": [], \"order_id\": [\"FIXTURE-1001\"], \"amount\": [], \"date\": [], \"error_code\": [], \"emails\": []}\n请通过平台官方人工客服入口提交以上信息，并补充人工核验所需的必要字段。请不要发送密码、短信验证码或完整支付凭证。",
+      "escalated": true,
+      "sample": "escalation",
+      "jev_request_count": 1,
+      "session_message_records": 2,
+      "handoff_summaries": [
+        {
+          "request_id": "a5232c30-02d4-443e-bdb9-8f8e5f77a503",
+          "reason": "explicit_human_request",
+          "intent": "escalation",
+          "urgency": "UNKNOWN",
+          "entities": {
+            "order_ids": [
+              "FIXTURE-1001"
+            ],
+            "amounts": [],
+            "dates": [],
+            "error_codes": [],
+            "order_id": [
+              "FIXTURE-1001"
+            ],
+            "amount": [],
+            "date": [],
+            "error_code": [],
+            "emails": []
+          },
+          "sensitive_data_required": false
+        }
+      ],
+      "role_results": [
+        {
+          "role": "escalation",
+          "success": true,
+          "response": "这个问题需要人工客服继续核验，已整理以下交接信息。\n\n升级原因：explicit_human_request\n问题类型：escalation，优先标记：UNKNOWN\n已记录信息：{\"order_ids\": [\"FIXTURE-1001\"], \"amounts\": [], \"dates\": [], \"error_codes\": [], \"order_id\": [\"FIXTURE-1001\"], \"amount\": [], \"date\": [], \"error_code\": [], \"emails\": []}\n请通过平台官方人工客服入口提交以上信息，并补充人工核验所需的必要字段。请不要发送密码、短信验证码或完整支付凭证。",
+          "handoff_summary": {
+            "request_id": "a5232c30-02d4-443e-bdb9-8f8e5f77a503",
+            "reason": "explicit_human_request",
+            "intent": "escalation",
+            "urgency": "UNKNOWN",
+            "entities": {
+              "order_ids": [
+                "FIXTURE-1001"
+              ],
+              "amounts": [],
+              "dates": [],
+              "error_codes": [],
+              "order_id": [
+                "FIXTURE-1001"
+              ],
+              "amount": [],
+              "date": [],
+              "error_code": [],
+              "emails": []
+            },
+            "sensitive_data_required": false
+          },
+          "requested_role": "escalation"
+        }
+      ]
+    }
+  ],
+  "role_model_parameters": {
+    "general": {
+      "temperature": 0.3,
+      "max_tokens": 900
+    },
+    "technical": {
+      "temperature": 0.1,
+      "max_tokens": 1200
+    },
+    "billing": {
+      "temperature": 0.0,
+      "max_tokens": 1100
+    }
+  },
+  "success": true,
+  "checks": [
+    "real role model settings and tool rounds",
+    "primary-supporting composition",
+    "deterministic handoff without generation",
+    "one Jev request per sample",
+    "one persisted user-assistant pair per sample"
+  ]
+}

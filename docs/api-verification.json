@@ -1,0 +1,38 @@
+{
+  "data_kind": "synthetic_fixture",
+  "model": "deepseek-v4-flash",
+  "jev_model": "jev-1.13.0",
+  "success": true,
+  "chat_llm_calls": 2,
+  "tools": [
+    "lookup_error_code"
+  ],
+  "tool_traces": [
+    {
+      "agent_type": "technical",
+      "tool_name": "lookup_error_code",
+      "tool_call_id": "call_00_hd3FWG0OgOXYehN8cbei6207",
+      "input": {
+        "error_code": "401"
+      },
+      "success": true,
+      "latency_ms": 1.3051250716671348
+    }
+  ],
+  "jev_request_count": 1,
+  "latency_ms": 7707.992541021667,
+  "case_status": "published",
+  "checks": [
+    "real model-tool-model",
+    "real Jev once",
+    "Redis exactly two messages",
+    "API ownership isolation",
+    "explicit short resolution",
+    "stable case id",
+    "real bge-m3 case search",
+    "sanitized cross-user reusable content",
+    "closed chat refused",
+    "unresolved rejected",
+    "reopen revoked"
+  ]
+}

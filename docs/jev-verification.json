@@ -1,0 +1,346 @@
+{
+  "verified_at_utc": "2026-10-04T10:23:57.780035+00:00",
+  "kind": "live_jev_chinese_smoke_test",
+  "scope": "Four live routing requests, not an accuracy benchmark or model/tool pipeline verification.",
+  "requested_model": "jev-1.13.0",
+  "results": [
+    {
+      "sample": "single_technical",
+      "message": "我登录后页面报错 401，一直无法登录，怎么办？",
+      "intent": "technical",
+      "primary_agent": "technical",
+      "supporting_agents": [],
+      "needs_clarification": false,
+      "escalated": false,
+      "degraded": false,
+      "degraded_reason": "",
+      "routing_scores": {
+        "general": 0.07,
+        "technical": 0.986,
+        "billing": 0.021,
+        "escalation": 0.0
+      },
+      "routing_reason": "jev_keyword_fusion",
+      "elapsed_ms": 2167.305,
+      "jev": {
+        "available": true,
+        "requested_model": "jev-1.13.0",
+        "model": "jev-1.13.0",
+        "model_version": "jev-1.13.0",
+        "latency_ms": 2166.175,
+        "request_count": 1,
+        "raw": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "intent": {
+              "type": "choice",
+              "choice": "technical",
+              "confidence": 1.0,
+              "probabilities": {
+                "escalation": 0.0,
+                "billing": 0.0,
+                "unknown": 0.0,
+                "technical": 1.0,
+                "general": 0.0
+              }
+            },
+            "general": {
+              "type": "noul",
+              "noul": 0.1
+            },
+            "technical": {
+              "type": "noul",
+              "noul": 0.98
+            },
+            "billing": {
+              "type": "noul",
+              "noul": 0.03
+            },
+            "escalation": {
+              "type": "noul",
+              "noul": 0.48
+            }
+          },
+          "usage": {
+            "input_tokens": 897,
+            "output_tokens": 121
+          }
+        },
+        "choice": "technical",
+        "choice_confidence": 1.0,
+        "choice_probabilities": {
+          "escalation": 0.0,
+          "billing": 0.0,
+          "unknown": 0.0,
+          "technical": 1.0,
+          "general": 0.0
+        },
+        "domain_probabilities": {
+          "general": 0.1,
+          "technical": 0.98,
+          "billing": 0.03,
+          "escalation": 0.48
+        },
+        "http_status": 200,
+        "usage": {
+          "input_tokens": 897,
+          "output_tokens": 121
+        }
+      }
+    },
+    {
+      "sample": "compound",
+      "message": "我的退款一直没到账，而且现在登录账户出现 401 报错，请一起帮我看看。",
+      "intent": "technical",
+      "primary_agent": "technical",
+      "supporting_agents": [
+        "billing"
+      ],
+      "needs_clarification": false,
+      "escalated": false,
+      "degraded": false,
+      "degraded_reason": "",
+      "routing_scores": {
+        "general": 0.518,
+        "technical": 0.979,
+        "billing": 0.979,
+        "escalation": 0.0
+      },
+      "routing_reason": "compound_domains",
+      "elapsed_ms": 515.115,
+      "jev": {
+        "available": true,
+        "requested_model": "jev-1.13.0",
+        "model": "jev-1.13.0",
+        "model_version": "jev-1.13.0",
+        "latency_ms": 514.991,
+        "request_count": 1,
+        "raw": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "intent": {
+              "type": "choice",
+              "choice": "technical",
+              "confidence": 0.4,
+              "probabilities": {
+                "billing": 0.45,
+                "technical": 0.52,
+                "escalation": 0.02,
+                "unknown": 0.01,
+                "general": 0.0
+              }
+            },
+            "general": {
+              "type": "noul",
+              "noul": 0.74
+            },
+            "technical": {
+              "type": "noul",
+              "noul": 0.97
+            },
+            "billing": {
+              "type": "noul",
+              "noul": 0.97
+            },
+            "escalation": {
+              "type": "noul",
+              "noul": 0.84
+            }
+          },
+          "usage": {
+            "input_tokens": 910,
+            "output_tokens": 121
+          }
+        },
+        "choice": "technical",
+        "choice_confidence": 0.4,
+        "choice_probabilities": {
+          "billing": 0.45,
+          "technical": 0.52,
+          "escalation": 0.02,
+          "unknown": 0.01,
+          "general": 0.0
+        },
+        "domain_probabilities": {
+          "general": 0.74,
+          "technical": 0.97,
+          "billing": 0.97,
+          "escalation": 0.84
+        },
+        "http_status": 200,
+        "usage": {
+          "input_tokens": 910,
+          "output_tokens": 121
+        }
+      }
+    },
+    {
+      "sample": "negated_human",
+      "message": "不需要转人工，帮我查一下退款多久到账。",
+      "intent": "billing",
+      "primary_agent": "billing",
+      "supporting_agents": [],
+      "needs_clarification": false,
+      "escalated": false,
+      "degraded": false,
+      "degraded_reason": "",
+      "routing_scores": {
+        "general": 0.595,
+        "technical": 0.049,
+        "billing": 0.972,
+        "escalation": 0.0
+      },
+      "routing_reason": "jev_keyword_fusion",
+      "elapsed_ms": 561.429,
+      "jev": {
+        "available": true,
+        "requested_model": "jev-1.13.0",
+        "model": "jev-1.13.0",
+        "model_version": "jev-1.13.0",
+        "latency_ms": 561.316,
+        "request_count": 1,
+        "raw": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "intent": {
+              "type": "choice",
+              "choice": "billing",
+              "confidence": 1.0,
+              "probabilities": {
+                "unknown": 0.0,
+                "billing": 1.0,
+                "general": 0.0,
+                "technical": 0.0,
+                "escalation": 0.0
+              }
+            },
+            "general": {
+              "type": "noul",
+              "noul": 0.85
+            },
+            "technical": {
+              "type": "noul",
+              "noul": 0.07
+            },
+            "billing": {
+              "type": "noul",
+              "noul": 0.96
+            },
+            "escalation": {
+              "type": "noul",
+              "noul": 0.06
+            }
+          },
+          "usage": {
+            "input_tokens": 892,
+            "output_tokens": 121
+          }
+        },
+        "choice": "billing",
+        "choice_confidence": 1.0,
+        "choice_probabilities": {
+          "unknown": 0.0,
+          "billing": 1.0,
+          "general": 0.0,
+          "technical": 0.0,
+          "escalation": 0.0
+        },
+        "domain_probabilities": {
+          "general": 0.85,
+          "technical": 0.07,
+          "billing": 0.96,
+          "escalation": 0.06
+        },
+        "http_status": 200,
+        "usage": {
+          "input_tokens": 892,
+          "output_tokens": 121
+        }
+      }
+    },
+    {
+      "sample": "vague",
+      "message": "那个东西有问题，帮我看看。",
+      "intent": "unknown",
+      "primary_agent": "general",
+      "supporting_agents": [],
+      "needs_clarification": true,
+      "escalated": false,
+      "degraded": false,
+      "degraded_reason": "",
+      "routing_scores": {
+        "general": 0.448,
+        "technical": 0.553,
+        "billing": 0.07,
+        "escalation": 0.0
+      },
+      "routing_reason": "insufficient_or_ambiguous_evidence",
+      "elapsed_ms": 1059.582,
+      "jev": {
+        "available": true,
+        "requested_model": "jev-1.13.0",
+        "model": "jev-1.13.0",
+        "model_version": "jev-1.13.0",
+        "latency_ms": 1059.5,
+        "request_count": 1,
+        "raw": {
+          "model": "jev-1.13.0",
+          "answers": {
+            "intent": {
+              "type": "choice",
+              "choice": "unknown",
+              "confidence": 0.48,
+              "probabilities": {
+                "unknown": 0.59,
+                "billing": 0.0,
+                "general": 0.01,
+                "technical": 0.4,
+                "escalation": 0.0
+              }
+            },
+            "general": {
+              "type": "noul",
+              "noul": 0.64
+            },
+            "technical": {
+              "type": "noul",
+              "noul": 0.79
+            },
+            "billing": {
+              "type": "noul",
+              "noul": 0.1
+            },
+            "escalation": {
+              "type": "noul",
+              "noul": 0.15
+            }
+          },
+          "usage": {
+            "input_tokens": 886,
+            "output_tokens": 121
+          }
+        },
+        "choice": "unknown",
+        "choice_confidence": 0.48,
+        "choice_probabilities": {
+          "unknown": 0.59,
+          "billing": 0.0,
+          "general": 0.01,
+          "technical": 0.4,
+          "escalation": 0.0
+        },
+        "domain_probabilities": {
+          "general": 0.64,
+          "technical": 0.79,
+          "billing": 0.1,
+          "escalation": 0.15
+        },
+        "http_status": 200,
+        "usage": {
+          "input_tokens": 886,
+          "output_tokens": 121
+        }
+      }
+    }
+  ]
+}
