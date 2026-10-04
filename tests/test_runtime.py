@@ -13,7 +13,7 @@ from app.contracts import PipelineInput
 from app.models import UsageCallback
 from app.profiles import PROFILES
 from app.routing import RouteDecision
-from app.runtime import V3Pipeline
+from app.runtime import ANSWER_CHECKLIST, V3Pipeline
 from app.tools import build_tools, TOOL_SCOPES
 
 
@@ -123,17 +123,17 @@ class RuntimeTests(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(tool_result.status, "error")
         self.assertNotIn("difference", tool_result.content)
 
-    async def test_tool_round_prose_and_final_answer_are_preserved_without_old_history(self):
+    async def test_only_final_answer_is_returned_without_tool_round_prose_or_old_history(self):
         def behavior(event):
             if not event["tool_messages"]:
-                return tool_call("lookup_error_code", {"error_code": "401"}, "请先记录发生时间。")
+                return tool_call("lookup_error_code", {"error_code": "401"}, "I'll look up the error code first.")
             return AIMessage(content="401 表示认证失败，请检查凭证是否过期。")
 
         pipeline, _, _, _ = self.pipeline(behavior, primary="technical")
         result = await pipeline.run(inp(history=[{"role": "assistant", "content": "OLD_HISTORY_SHOULD_NOT_REPEAT"}]))
         self.assertTrue(result.success)
-        self.assertIn("请先记录发生时间。", result.response)
-        self.assertIn("401 表示认证失败", result.response)
+        self.assertNotIn("I'll look up", result.response)
+        self.assertEqual(result.response, "401 表示认证失败，请检查凭证是否过期。")
         self.assertNotIn("OLD_HISTORY_SHOULD_NOT_REPEAT", result.response)
         self.assertEqual(result.llm_calls, 2)
         self.assertEqual(result.input_tokens, 6)
@@ -216,6 +216,7 @@ class RuntimeTests(unittest.IsolatedAsyncioTestCase):
             if event['role'] == 'composer':
                 self.assertIn('如果结论冲突', event['prompt'])
                 self.assertIn('fixture skill for general', event['prompt'])
+                self.assertNotIn('search_knowledge_base', event['prompt'])
                 packet = json.loads(event['user'])
                 self.assertEqual(packet['selected_primary'], 'technical')
                 self.assertEqual(packet['primary_agent'], 'technical')
@@ -228,8 +229,12 @@ class RuntimeTests(unittest.IsolatedAsyncioTestCase):
             self.assertIn('；'.join(profile.handoff_conditions), event['prompt'])
             self.assertEqual((event['temperature'], event['max_tokens']),
                              (profile.temperature, profile.max_tokens))
-            packet = json.loads(event['prompt'].split('[角色输入包]\n', 1)[1])
+            packet = json.loads(event['prompt'].split('[角色输入包]\n', 1)[1].split('\n', 1)[0])
             self.assertIsNone(packet['urgency'])
+            self.assertFalse(packet['needs_clarification'])
+            # The retrieval checklist is the last instruction an agent reads.
+            self.assertTrue(event['prompt'].rstrip().endswith(ANSWER_CHECKLIST.rstrip()))
+            self.assertNotIn('[本轮路由与已有字段]', event['prompt'])
             self.assertNotIn('user_profile', packet)
             if event['role'] == 'technical':
                 self.assertEqual(packet['diagnostic_fields']['error_codes'], ['401'])
